@@ -10,8 +10,16 @@ router = Router(db)
 @app.command()
 def makemigrations(name: str):
     """Create a new migration with the given name."""
-    subprocess.run([f'pw_migrate', 'create', '--auto', '--auto-source', 'models', '--database',
-                    'sqlite:///db.db', '--directory', 'migrations', name])
+    subprocess.run([f'pw_migrate',
+                    'create',
+                    '--auto',
+                    '--auto-source',
+                    'models',
+                    '--database',
+                    'sqlite:///db.db',
+                    '--directory',
+                    'migrations',
+                    name])
     typer.echo(f"Migration '{name}' created.")
 
 
