@@ -27,7 +27,17 @@ A simple Python application demonstrating user authentication and message manage
 
 ## Database Setup
 
-Create and run migrations to set up the database schema:
+Create and run migrations to set up the database schema using the `manage.py` script:
+
+```bash
+# Create initial migration
+python manage.py makemigrations initial_migration
+
+# Apply migrations
+python manage.py migrate
+```
+
+Alternatively, you can use the `pw_migrate` command directly:
 
 ```bash
 # Create initial migration
@@ -73,11 +83,28 @@ Message.create(title="Hello", message="This is my first message", user=user)
 
 ```
 ├── main.py          # Main application entry point
+├── manage.py        # Database migration management commands
 ├── models.py        # Database models (User, Message)
 ├── settings.py      # Database configuration
 ├── migrations/      # Database migration files
 └── readme.md        # Project documentation
 ```
+
+## Management Commands
+
+The `manage.py` script provides convenient commands for database management:
+
+### Create Migrations
+```bash
+python manage.py makemigrations <migration_name>
+```
+Creates a new migration file with the specified name, automatically detecting model changes.
+
+### Apply Migrations
+```bash
+python manage.py migrate
+```
+Applies all pending migrations to the database.
 
 ## References
 
