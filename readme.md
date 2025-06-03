@@ -82,4 +82,4 @@ Message.create(title="Hello", message="This is my first message", user=user)
 ## References
 
 - [Email Validator Package](https://pypi.org/project/email-validator/)
-- [Peewee Migrate Documentation](https://pypi.org/project/peewee-migrate/#from-shell)# peewee-hash-migrate
+- [Peewee Migrate Documentation](https://pypi.org/project/peewee-migrate/#from-shell)
