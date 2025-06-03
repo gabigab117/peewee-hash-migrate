@@ -2,7 +2,6 @@ from peewee_migrate import Router
 import typer
 import subprocess
 from settings import db
-from models import User, Message
 
 
 app = typer.Typer()
